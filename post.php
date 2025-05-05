@@ -6,12 +6,10 @@
         <h1 class="c-post__title"><?php $this->title() ?></h1>
         <hr>
         <div class="c-content">
-          <p><?php _e('发布时间: '); ?><time datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s'); ?></time>
-            <?php _e('最后更新: '); ?><time datetime="<?php echo date('Y-m-d H:i:s', $this->modified); ?>" itemprop="datePublished"><?php echo date('Y-m-d H:i:s', $this->modified); ?></time>  
-          <?php _e('分类: '); ?><?php $this->category(' , '); ?>
-          <?php _e('评论: '); ?><a href="#comments"><?php $this->commentsNum('去评论', '1条评论', '%d条评论'); ?></a>
-        </p>
-
+          <p>
+            <?php _e('发布时间: '); ?><time datetime="<?php $this->date('Y-m-d'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d'); ?></time>
+            <?php _e('分类: '); ?><?php $this->category(' , '); ?>
+          </p>
           <?php $this->content(); ?>
         </div>
         <div class="c-tags">

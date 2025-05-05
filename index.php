@@ -16,10 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		<div class="o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l c-post-card-wrap js-post-card-wrap ">
 			<div class="c-post-card ">
 				<div class="c-post-card__media">
-					<a href="<?php $this->permalink() ?>" class="js-fadein c-post-card__image" style="background-image: url(<?php if (array_key_exists('img',unserialize($this->___fields()))): ?>
-					<?php $this->fields->img(); ?>_580x330.jpg
-					<?php else: ?>
-					<?php
+					<a href="<?php $this->permalink() ?>" class="js-fadein c-post-card__image" style="background-image: url(<?php
                        preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);
                        $imgCount = count($matches[0]);
                        if($imgCount >= 1){
@@ -27,8 +24,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                        echo <<<Html
                        {$img}
                        Html;
-                       }?>
-                    <?php endif; ?>)">
+                       }?>)">
 						<?php if (array_key_exists('star',unserialize($this->___fields()))): ?><span title="Featured Post">
 						<div class="icon icon--ei-star icon--s c-post-card--featured__icon">
 							<svg class="icon__cnt"><use xlink:href="#ei-star-icon"></use></svg>
