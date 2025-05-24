@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-    <div class="o-grid">
+<div class="o-grid">
       <div class="o-grid__col o-grid__col--full">
         <div class="c-archive">
           <h4 class="c-archive__title"><?php $this->archiveTitle(array(
@@ -9,9 +9,11 @@
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), '', ''); ?></h4>
+          <?php if ($this->is('category')): ?>
              <p class="c-archive__description">
-            <?php echo $this->getDescription(); ?>
-            </p> 
+                <?php echo $this->getDescription(); ?>
+             </p> 
+          <?php endif; ?>
         </div>
       </div>
     </div>

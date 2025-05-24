@@ -65,7 +65,8 @@ function themeConfig($form)
         _t('在这里填入一个 Gravatar 镜像')
     );
     $form->addInput($cnavatar);
-
+    $sticky = new Typecho_Widget_Helper_Form_Element_Text('sticky', NULL, NULL, _t('置顶文章cid'), _t('多篇文章以`|`符号隔开'), _t('会在首页展示置顶文章。'));
+    $form->addInput($sticky);
     $icpbeian = new Typecho_Widget_Helper_Form_Element_Text('icpbeian', NULL, NULL, _t('备案号码'), _t('不填写则不显示'));
     $form->addInput($icpbeian);
     $tongji = new Typecho_Widget_Helper_Form_Element_Textarea('tongji', NULL, NULL, _t('Footer代码'), _t('在footer中插入代码支持HTML'));
