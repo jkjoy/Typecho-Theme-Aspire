@@ -1,6 +1,14 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-<style>#toc{font-size:14px;padding:10px 15px;background-color:var(--farallon-background-gray);border-radius:10px;margin-bottom:20px}#toc  summary{cursor:pointer}#toc toc-title{font-weight:600}#toc  ul{padding-left:10px;margin-bottom:10px}#toc  ul li::before{content:"";margin-right:5px}#toc  ul li>ul{margin-left:10px;font-size:12px}</style>
+<style>
+#toc{font-size:14px;padding:5px 5px;background-color:rgba(250,250,250,1);border-radius:10px;margin-bottom:1px}
+#toc  summary{cursor:pointer}
+#toc toc-title{font-weight:600}
+#toc  ul{padding-left:5px;margin-bottom:-10px}
+#toc  ul li::before{content:"";margin-right:5px;}
+#toc  ul li>ul{margin-left:10px;font-size:12px}
+#toc ul li{margin-bottom:-10px;margin-top:-10px;}
+</style>
   <div class="o-grid">
     <div class="o-grid__col o-grid__col--center o-grid__col--2-3-m">
       <article class="c-post page">

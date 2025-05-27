@@ -76,6 +76,49 @@
 		</div>
 	</div>
 	</footer>
+<button id="backToTopBtn" title="返回顶部">↑</button>
+<style>
+	#backToTopBtn {
+  display: none; /* 默认隐藏 */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTopBtn = document.getElementById('backToTopBtn');
+
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = 'block';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </div>
 <script src="<?php $this->options->themeUrl('js.js'); ?>"></script>
 <?php $this->footer(); ?>
